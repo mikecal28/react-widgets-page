@@ -1,0 +1,79 @@
+html {
+  width: 100%;
+  height: 100%;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+
+    > * {
+      width: 100%;
+      height: 100%;
+
+      .app {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        @include flex-cc;
+
+        h1 {
+          font-size: 6rem;
+          color: gold;
+        }
+
+        .widget-container {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          justify-items: center;
+          align-items: center;
+
+          .widget-wrapper {
+            width: 100%;
+            height: 100%;
+            @include flex-cc;
+
+            .color-changer {
+              font-size: 50px;
+            }
+
+            .rgb-box {
+              width: 100%;
+              height: 25%;
+              border: 1px solid black;
+            }
+
+            h3 {
+              font-size: 5rem;
+            }
+
+            .hidden {
+              visibility: hidden;
+            }
+
+            div {
+              width: auto;
+              height: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              button {
+                width: 5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
